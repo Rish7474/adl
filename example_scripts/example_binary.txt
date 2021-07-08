@@ -1,14 +1,14 @@
-
-ADD simple_automatas.txt // simple_dfa.txt is a file path that contains automata implementations
+// simple_dfa.txt is a file path that contains automata implementations
+ADD simple_automatas.txt
 
 // output scopes test out different inputs to automatas and output to a file
 output {
-    log_file = "output1.txt";
-    sim(dfa1, ["010", "e", "000"]);
-    sim(pda1, ["101, "1, "11"]);
+    LOG_FILE = "output1.txt";
+    sim(dfa1, [010, e, 000]);
+    sim(pda1, [101, 1, 11]);
 }
 
 output {
-    log_file = "output2.txt";
-    sim(tm1, ["aaabbbccc", "abcc", aaaccc", "abc"]);
+    LOG_FILE = "output2.txt";
+    sim(tm1, [aaabbbccc, abcc, aaaccc, abc]);
 }

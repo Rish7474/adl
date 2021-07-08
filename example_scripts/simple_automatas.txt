@@ -1,0 +1,17 @@
+
+// 'dfa', 'pda', and 'tm' are automata types. All automatas must be defined to one of the types.
+
+dfa dfa1 = {
+    // states must be declared before using them.
+    state s1, s2, s3, s4;
+
+    START = s1; // setting s1 to be the start state. Having start be set mutiple times leads to error.
+    END = s3, s4; // setting end states.
+
+    // creating a path from s1 to s2 that needs a 0 or e to move to s2.
+    path(s1, s2, 0 | e);
+    path(s1, s1, 1);
+    path(s2, s3, 0);
+    path(s3, s3, \*); // '\*' means all the letters in the alphabet
+    path(s2, s1, 1);
+}
